@@ -1,17 +1,17 @@
 import '@vant/touch-emulator';
+import './assets/base.css';
+import 'normalize.css';
 import { createApp } from 'vue'
-import { createPinia } from 'pinia'
-import LottieAnimation from "lottie-web-vue";
+import { setupStore } from "@/stores";
 
 import App from './App.vue'
-import router from './router'
 
 import './assets/main.css'
+import router from './router'
 
 const app = createApp(App)
 
-app.use(createPinia())
+setupStore(app)
 app.use(router)
-app.use(LottieAnimation);
 
 app.mount('#app')
