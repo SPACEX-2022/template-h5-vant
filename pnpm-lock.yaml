@@ -46,6 +46,7 @@ specifiers:
   typescript: ~4.7.4
   unplugin-vue-components: ^0.22.4
   vant: ^3.6.1
+  vconsole: ^3.14.7
   vite: ^3.0.4
   vite-plugin-compression: ^0.5.1
   vite-plugin-html: ^3.2.0
@@ -71,6 +72,7 @@ dependencies:
   pinia-plugin-persistedstate: 2.3.0_pinia@2.0.21
   qs: 6.11.0
   vant: 3.6.1_vue@3.2.37
+  vconsole: 3.14.7
   vue: 3.2.37
   vue-router: 4.1.5_vue@3.2.37
 
@@ -1752,10 +1754,14 @@ packages:
       safe-buffer: 5.1.2
     dev: true
 
+  /copy-text-to-clipboard/3.0.1:
+    resolution: {integrity: sha512-rvVsHrpFcL4F2P8ihsoLdFHmd404+CMg71S756oRSeQgqk51U3kicGdnvfkrxva0xXH92SjGS62B0XIJsbh+9Q==}
+    engines: {node: '>=12'}
+    dev: false
+
   /core-js/3.25.5:
     resolution: {integrity: sha512-nbm6eZSjm+ZuBQxCUPQKQCoUEfFOXjUZ8dTTyikyKaWrTYmAVbykQfwsKE5dBK88u3QCkCrzsx/PPlKfhsvgpw==}
     requiresBuild: true
-    dev: true
 
   /core-util-is/1.0.3:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
@@ -4229,6 +4235,10 @@ packages:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
     dev: true
 
+  /mutation-observer/1.0.3:
+    resolution: {integrity: sha512-M/O/4rF2h776hV7qGMZUH3utZLO/jK7p8rnNgGkjKUw8zCGjRQPxB8z6+5l8+VjRUQ3dNYu4vjqXYLr+U8ZVNA==}
+    dev: false
+
   /nanoid/3.3.4:
     resolution: {integrity: sha512-MqBkQh/OHTS2egovRtLk45wEyNXwF+cokD+1YPf9u5VfJiRdAiRwB2froX5Co9Rh20xs4siNPm8naNotSD6RBw==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
@@ -5606,6 +5616,15 @@ packages:
       '@vant/popperjs': 1.2.1
       '@vant/use': 1.4.2
       vue: 3.2.37
+    dev: false
+
+  /vconsole/3.14.7:
+    resolution: {integrity: sha512-48byrra1sZk0zJfUM8HFN/ZKtMzvd7Sirt2h5Hfnf7txKOxL9JfoFKB2uLixmOF3jjxCpwnLLb1tsHlg4YzoyA==}
+    dependencies:
+      '@babel/runtime': 7.18.9
+      copy-text-to-clipboard: 3.0.1
+      core-js: 3.25.5
+      mutation-observer: 1.0.3
     dev: false
 
   /vite-plugin-compression/0.5.1_vite@3.0.9:

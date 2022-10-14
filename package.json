@@ -24,6 +24,7 @@
     "pinia-plugin-persistedstate": "^2.3.0",
     "qs": "^6.11.0",
     "vant": "^3.6.1",
+    "vconsole": "^3.14.7",
     "vue": "^3.2.37",
     "vue-router": "^4.1.3"
   },
