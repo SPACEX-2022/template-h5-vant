@@ -15,6 +15,7 @@ specifiers:
   '@types/node': ^16.11.47
   '@types/qs': ^6.9.7
   '@vant/touch-emulator': ^1.4.0
+  '@vant/use': ^1.4.3
   '@vitejs/plugin-legacy': ^2.2.0
   '@vitejs/plugin-vue': ^3.0.1
   '@vitejs/plugin-vue-jsx': ^2.0.0
@@ -25,6 +26,8 @@ specifiers:
   autoprefixer: ^10.4.8
   axios: ^0.27.2
   cross-env: ^7.0.3
+  crypto-js: ^4.1.1
+  dayjs: ^1.11.6
   dotenv: ^16.0.3
   eslint: ^8.21.0
   eslint-plugin-vue: ^9.3.0
@@ -63,7 +66,10 @@ dependencies:
   '@antv/f2-vue': 4.0.9
   '@fingerprintjs/fingerprintjs': 3.3.6
   '@vant/touch-emulator': 1.4.0
+  '@vant/use': 1.4.3
   axios: 0.27.2
+  crypto-js: 4.1.1
+  dayjs: 1.11.6
   lodash-es: 4.17.21
   lottie-web-vue: 2.0.6
   mathjs: 11.1.0
@@ -997,8 +1003,8 @@ packages:
     resolution: {integrity: sha512-Zt+zISV0+wpOew2S1siOJ3G22y+hapHAKmXM+FhpvWzsRc4qahaYXatCAITuuXt0EcDp7WvEeTO4F7p9AtX/pw==}
     dev: false
 
-  /@vant/use/1.4.2:
-    resolution: {integrity: sha512-+30mOa/FY26qk8Ag/Cmqb51JaOgE9rS1xDS24yDx4aHixMhTZH2QsuFGrQVPEazkeK8R+p14oW28kK3146Gtbg==}
+  /@vant/use/1.4.3:
+    resolution: {integrity: sha512-rSnETN7P9qT1WbItMpQxBqe3cHeK2ZFYp1sCxWUXaTeI71TqA8sOdzC36ledZ36NQgFNTch9fsRPYOkrCgZfQA==}
     dev: false
 
   /@vitejs/plugin-legacy/2.2.0_vite@3.0.9:
@@ -1803,6 +1809,10 @@ packages:
       which: 2.0.2
     dev: true
 
+  /crypto-js/4.1.1:
+    resolution: {integrity: sha512-o2JlM7ydqd3Qk9CA0L4NL6mTzU2sdx96a+oOfPu8Mkl/PK51vSyoi8/rQ8NknZtk44vq15lmhAj9CIAGwgeWKw==}
+    dev: false
+
   /css-select/4.3.0:
     resolution: {integrity: sha512-wPpOYtnsVontu2mODhA19JrqWxNsfdatRKd64kmpRbQgh1KtItko5sTnEpPdpSaJszTOhEMlF/RPz28qj4HqhQ==}
     dependencies:
@@ -1897,6 +1907,10 @@ packages:
       whatwg-mimetype: 3.0.0
       whatwg-url: 11.0.0
     dev: true
+
+  /dayjs/1.11.6:
+    resolution: {integrity: sha512-zZbY5giJAinCG+7AGaw0wIhNZ6J8AhWuSXKvuc1KAyMiRsvGQWqh4L+MomvhdAYjN+lqvVCMq1I41e3YHvXkyQ==}
+    dev: false
 
   /debug/4.3.4:
     resolution: {integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==}
@@ -5614,7 +5628,7 @@ packages:
     dependencies:
       '@vant/icons': 1.8.0
       '@vant/popperjs': 1.2.1
-      '@vant/use': 1.4.2
+      '@vant/use': 1.4.3
       vue: 3.2.37
     dev: false
 

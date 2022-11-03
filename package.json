@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
+    "build:test": "cross-env vite build --mode test && esno ./build/script/postBuild.ts",
     "preview": "vite preview --port 4173",
     "test:unit": "vitest --environment jsdom",
     "build-only": "cross-env NODE_ENV=production vite build && esno ./build/script/postBuild.ts",
@@ -15,7 +16,10 @@
     "@antv/f2-vue": "^4.0.9",
     "@fingerprintjs/fingerprintjs": "^3.3.6",
     "@vant/touch-emulator": "^1.4.0",
+    "@vant/use": "^1.4.3",
     "axios": "^0.27.2",
+    "crypto-js": "^4.1.1",
+    "dayjs": "^1.11.6",
     "lodash-es": "^4.17.21",
     "lottie-web-vue": "^2.0.6",
     "mathjs": "^11.1.0",
