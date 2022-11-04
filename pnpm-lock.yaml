@@ -46,6 +46,7 @@ specifiers:
   postcss-pxtorem: ^6.0.0
   prettier: ^2.7.1
   qs: ^6.11.0
+  sass: ^1.56.0
   typescript: ~4.7.4
   unplugin-vue-components: ^0.22.4
   vant: ^3.6.1
@@ -110,15 +111,16 @@ devDependencies:
   postcss: 8.4.16
   postcss-pxtorem: 6.0.0_postcss@8.4.16
   prettier: 2.7.1
+  sass: 1.56.0
   typescript: 4.7.4
   unplugin-vue-components: 0.22.4_vite@3.0.9+vue@3.2.37
-  vite: 3.0.9
+  vite: 3.0.9_sass@1.56.0
   vite-plugin-compression: 0.5.1_vite@3.0.9
   vite-plugin-html: 3.2.0_vite@3.0.9
   vite-plugin-imagemin: 0.6.1_vite@3.0.9
   vite-plugin-vconsole: 1.2.2
   vite-plugin-vue-setup-extend: 0.4.0_vite@3.0.9
-  vitest: 0.21.1_jsdom@20.0.0
+  vitest: 0.21.1_jsdom@20.0.0+sass@1.56.0
   vue-tsc: 0.39.5_typescript@4.7.4
 
 packages:
@@ -1019,7 +1021,7 @@ packages:
       magic-string: 0.26.7
       regenerator-runtime: 0.13.9
       systemjs: 6.13.0
-      vite: 3.0.9
+      vite: 3.0.9_sass@1.56.0
     dev: true
 
   /@vitejs/plugin-vue-jsx/2.0.0_vite@3.0.9+vue@3.2.37:
@@ -1033,7 +1035,7 @@ packages:
       '@babel/plugin-syntax-import-meta': 7.10.4_@babel+core@7.18.13
       '@babel/plugin-transform-typescript': 7.18.12_@babel+core@7.18.13
       '@vue/babel-plugin-jsx': 1.1.1_@babel+core@7.18.13
-      vite: 3.0.9
+      vite: 3.0.9_sass@1.56.0
       vue: 3.2.37
     transitivePeerDependencies:
       - supports-color
@@ -1046,7 +1048,7 @@ packages:
       vite: ^3.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 3.0.9
+      vite: 3.0.9_sass@1.56.0
       vue: 3.2.37
     dev: true
 
@@ -3576,6 +3578,10 @@ packages:
       replace-ext: 1.0.1
     dev: true
 
+  /immutable/4.1.0:
+    resolution: {integrity: sha512-oNkuqVTA8jqG1Q6c+UglTOD1xhC1BtjKI7XkCXRkZHrN5m18/XsnUp8Q89GkQO/z+0WjonSvl0FLhDYftp46nQ==}
+    dev: true
+
   /import-fresh/3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
     engines: {node: '>=6'}
@@ -4983,6 +4989,16 @@ packages:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
     dev: true
 
+  /sass/1.56.0:
+    resolution: {integrity: sha512-WFJ9XrpkcnqZcYuLRJh5qiV6ibQOR4AezleeEjTjMsCocYW59dEG19U3fwTTXxzi2Ed3yjPBp727hbbj53pHFw==}
+    engines: {node: '>=12.0.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.5.3
+      immutable: 4.1.0
+      source-map-js: 1.0.2
+    dev: true
+
   /saxes/6.0.0:
     resolution: {integrity: sha512-xAg7SOnEhrm5zI3puOOKyy1OMcMlIJZYNJY7xLBwSze0UjhPLnWfj2GF2EpT0jmzaJKIWKHLsaSSajf35bcYnA==}
     engines: {node: '>=v12.22.7'}
@@ -5556,7 +5572,7 @@ packages:
     dependencies:
       acorn: 8.8.0
       chokidar: 3.5.3
-      vite: 3.0.9
+      vite: 3.0.9_sass@1.56.0
       webpack-sources: 3.2.3
       webpack-virtual-modules: 0.4.4
     dev: true
@@ -5649,7 +5665,7 @@ packages:
       chalk: 4.1.2
       debug: 4.3.4
       fs-extra: 10.1.0
-      vite: 3.0.9
+      vite: 3.0.9_sass@1.56.0
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -5671,7 +5687,7 @@ packages:
       html-minifier-terser: 6.1.0
       node-html-parser: 5.4.2
       pathe: 0.2.0
-      vite: 3.0.9
+      vite: 3.0.9_sass@1.56.0
     dev: true
 
   /vite-plugin-imagemin/0.6.1_vite@3.0.9:
@@ -5702,7 +5718,7 @@ packages:
       imagemin-webp: 6.0.0
       jpegtran-bin: 6.0.1
       pathe: 0.2.0
-      vite: 3.0.9
+      vite: 3.0.9_sass@1.56.0
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -5718,10 +5734,10 @@ packages:
     dependencies:
       '@vue/compiler-sfc': 3.2.37
       magic-string: 0.25.9
-      vite: 3.0.9
+      vite: 3.0.9_sass@1.56.0
     dev: true
 
-  /vite/3.0.9:
+  /vite/3.0.9_sass@1.56.0:
     resolution: {integrity: sha512-waYABTM+G6DBTCpYAxvevpG50UOlZuynR0ckTK5PawNVt7ebX6X7wNXHaGIO6wYYFXSM7/WcuFuO2QzhBB6aMw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -5744,11 +5760,12 @@ packages:
       postcss: 8.4.16
       resolve: 1.22.1
       rollup: 2.77.3
+      sass: 1.56.0
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
 
-  /vitest/0.21.1_jsdom@20.0.0:
+  /vitest/0.21.1_jsdom@20.0.0+sass@1.56.0:
     resolution: {integrity: sha512-WBIxuFmIDPuK47GO6Lu9eNeRMqHj/FWL3dk73OHH3eyPPWPiu+UB3QHLkLK2PEggCqJW4FaWoWg8R68S7p9+9Q==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
@@ -5782,7 +5799,7 @@ packages:
       local-pkg: 0.4.2
       tinypool: 0.2.4
       tinyspy: 1.0.2
-      vite: 3.0.9
+      vite: 3.0.9_sass@1.56.0
     transitivePeerDependencies:
       - less
       - sass

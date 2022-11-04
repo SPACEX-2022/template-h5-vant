@@ -1,5 +1,5 @@
 import '@vant/touch-emulator';
-import './assets/base.css';
+import './assets/base.scss';
 import 'normalize.css';
 import { createApp } from 'vue'
 import { setupStore } from "@/stores";

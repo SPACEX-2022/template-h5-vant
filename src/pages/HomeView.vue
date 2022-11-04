@@ -1,3 +1,4 @@
+<!--suppress ALL -->
 <script setup lang="ts">
 </script>
 
@@ -7,8 +8,9 @@
   </main>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 main {
   width: 375px;
+  font-family: $baseFontFamily;
 }
 </style>

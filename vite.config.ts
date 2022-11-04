@@ -69,6 +69,13 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
         '/@/': fileURLToPath(new URL('./src', import.meta.url)) + '/',
         '/#/': fileURLToPath(new URL('./types', import.meta.url)) + '/',
       }
+    },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@import "@/assets/utils.scss";'
+        }
+      }
     }
   }
 }

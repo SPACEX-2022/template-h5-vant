@@ -1,0 +1,8 @@
+$baseFontFamily: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+// 设定重置函数拼接到原始变量之前，若无需拼接则直接继承
+@function ff($fontFamily) {
+  @return $fontFamily, $baseFontFamily;
+}
+
+//$PingFang:ff("PingFang SC");
+//$DINNextLTPro:ff("DIN Next LT Pro");
