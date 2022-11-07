@@ -1,7 +1,7 @@
 import type { UserConfig, ConfigEnv } from 'vite';
 import { loadEnv } from 'vite';
-import Components from 'unplugin-vue-components/vite';
-import { VantResolver } from 'unplugin-vue-components/resolvers';
+// import Components from 'unplugin-vue-components/vite';
+// import { VantResolver } from 'unplugin-vue-components/resolvers';
 import { fileURLToPath, URL } from 'node:url'
 import { viteVConsole } from 'vite-plugin-vconsole';
 import { wrapperEnv } from './build/utils';
@@ -45,9 +45,9 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       }),
       vue(),
       vueJsx(),
-      Components({
-        resolvers: [VantResolver()],
-      }),
+      // Components({
+      //   resolvers: [VantResolver()],
+      // }),
       viteVConsole({
         entry: path.resolve('src/main.ts'), // or you can use entry: [path.resolve('src/main.ts')]
         localEnabled: true,

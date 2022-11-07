@@ -3,6 +3,7 @@ import './assets/base.scss';
 import 'normalize.css';
 import { createApp } from 'vue'
 import { setupStore } from "@/stores";
+import { setupVant } from "@/vant";
 
 import App from './App.vue'
 
@@ -12,6 +13,7 @@ import router from './router'
 const app = createApp(App)
 
 setupStore(app)
+setupVant(app)
 app.use(router)
 
 app.mount('#app')
