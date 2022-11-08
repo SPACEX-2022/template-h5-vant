@@ -13,7 +13,7 @@ import { configCompressPlugin } from './compress';
 import { configStyleImportPlugin } from './styleImport';
 import { configVisualizerConfig } from './visualizer';
 import { configThemePlugin } from './theme';
-import { configImageminPlugin } from './imagemin';
+// import { configImageminPlugin } from './imagemin';
 import { configSvgIconsPlugin } from './svgSprite';
 
 export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
@@ -67,7 +67,7 @@ export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
     VITE_LEGACY && vitePlugins.push(legacy());
 
     // vite-plugin-imagemin
-    VITE_USE_IMAGEMIN && vitePlugins.push(configImageminPlugin());
+    // VITE_USE_IMAGEMIN && vitePlugins.push(configImageminPlugin());
 
     // rollup-plugin-gzip
     vitePlugins.push(
