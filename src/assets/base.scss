@@ -1,6 +1,5 @@
 /* color palette from <https://github.com/vuejs/theme> */
 @import "@/assets/utils.scss";
-
 *,
 *::before,
 *::after {
@@ -9,7 +8,15 @@
   padding: 0;
 }
 
+html {
+  font-size: 26.66667vw;
+  overflow: hidden;
+}
+
+#app {
+  font-family: PingFangSC-Regular,sans-serif
+}
+
 body {
-  min-height: 100vh;
   font-family: $baseFontFamily;
 }
