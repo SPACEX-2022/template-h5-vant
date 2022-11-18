@@ -1,4 +1,4 @@
-import { i18n } from '/@/locales/setupI18n';
+// import { i18n } from '/@/locales/setupI18n';
 
 type I18nGlobalTranslation = {
   (key: string): string;
@@ -21,31 +21,31 @@ function getKey(namespace: string | undefined, key: string) {
   return `${namespace}.${key}`;
 }
 
-export function useI18n(namespace?: string): {
-  t: I18nGlobalTranslation;
-} {
-  const normalFn = {
-    t: (key: string) => {
-      return getKey(namespace, key);
-    },
-  };
-
-  if (!i18n) {
-    return normalFn;
-  }
-
-  const { t, ...methods } = i18n.global;
-
-  const tFn: I18nGlobalTranslation = (key: string, ...arg: any[]) => {
-    if (!key) return '';
-    if (!key.includes('.') && !namespace) return key;
-    return t(getKey(namespace, key), ...(arg as I18nTranslationRestParameters));
-  };
-  return {
-    ...methods,
-    t: tFn,
-  };
-}
+// export function useI18n(namespace?: string): {
+//   t: I18nGlobalTranslation;
+// } {
+//   const normalFn = {
+//     t: (key: string) => {
+//       return getKey(namespace, key);
+//     },
+//   };
+//
+//   if (!i18n) {
+//     return normalFn;
+//   }
+//
+//   const { t, ...methods } = i18n.global;
+//
+//   const tFn: I18nGlobalTranslation = (key: string, ...arg: any[]) => {
+//     if (!key) return '';
+//     if (!key.includes('.') && !namespace) return key;
+//     return t(getKey(namespace, key), ...(arg as I18nTranslationRestParameters));
+//   };
+//   return {
+//     ...methods,
+//     t: tFn,
+//   };
+// }
 
 // Why write this function？
 // Mainly to configure the vscode i18nn ally plugin. This function is only used for routing and menus. Please use useI18n for other places

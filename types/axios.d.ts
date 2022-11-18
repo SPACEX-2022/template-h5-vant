@@ -32,11 +32,37 @@ export interface RetryRequest {
   count: number;
   waitTime: number;
 }
+/**
+ * 响应数据返回通用格式
+ */
 export interface Result<T = any> {
-  code: number;
-  type: 'success' | 'error' | 'warning';
+  code: string;
   message: string;
-  result: T;
+  flag: string;
+  dataResult: T;
+}
+/**
+ * 分页请求返回数据类型
+ */
+export interface PageResult<T = any> {
+  code:           string;
+  dataResult:     T;
+  message:        string;
+  pageIndex:      number;
+  pageSize:       number;
+  permitNextPage?: number;
+  success?:        boolean;
+  total:          number;
+  totalPage?:      number;
+}
+
+/**
+ * 分页请求数据参数
+ */
+export interface PageQueryParam {
+  offset?:    number;
+  pageIndex: number;
+  pageSize:  number;
 }
 
 // multipart/form-data: upload file

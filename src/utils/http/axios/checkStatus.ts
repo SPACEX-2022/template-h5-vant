@@ -1,22 +1,22 @@
 import type { ErrorMessageMode } from '/#/axios';
 import { useMessage } from '/@/hooks/web/useMessage';
-import { useI18n } from '/@/hooks/web/useI18n';
+import { t } from '/@/hooks/web/useI18n';
 // import router from '/@/router';
 // import { PageEnum } from '/@/enums/pageEnum';
-import { useUserStoreWithOut } from '/@/store/modules/user';
-import projectSetting from '/@/settings/projectSetting';
+import { useUserStoreWithOut } from '/@/stores/modules/user';
+// import projectSetting from '/@/settings/projectSetting';
 import { SessionTimeoutProcessingEnum } from '/@/enums/appEnum';
 
 const { createMessage, createErrorModal } = useMessage();
-const error = createMessage.error!;
-const stp = projectSetting.sessionTimeoutProcessing;
+const error = createMessage!;
+// const stp = projectSetting.sessionTimeoutProcessing;
 
 export function checkStatus(
   status: number,
   msg: string,
   errorMessageMode: ErrorMessageMode = 'message',
 ): void {
-  const { t } = useI18n();
+  // const { t } = useI18n();
   const userStore = useUserStoreWithOut();
   let errMessage = '';
 
@@ -30,11 +30,11 @@ export function checkStatus(
     case 401:
       userStore.setToken(undefined);
       errMessage = msg || t('sys.api.errMsg401');
-      if (stp === SessionTimeoutProcessingEnum.PAGE_COVERAGE) {
-        userStore.setSessionTimeout(true);
-      } else {
-        userStore.logout(true);
-      }
+      // if (stp === SessionTimeoutProcessingEnum.PAGE_COVERAGE) {
+      //   userStore.setSessionTimeout(true);
+      // } else {
+      //   userStore.logout(true);
+      // }
       break;
     case 403:
       errMessage = t('sys.api.errMsg403');
@@ -72,9 +72,9 @@ export function checkStatus(
 
   if (errMessage) {
     if (errorMessageMode === 'modal') {
-      createErrorModal({ title: t('sys.api.errorTip'), content: errMessage });
+      createErrorModal({ title: t('sys.api.errorTip'), message: errMessage });
     } else if (errorMessageMode === 'message') {
-      error({ content: errMessage, key: `global_error_message_status_${status}` });
+      error(`global_error_message_status_${status}`);
     }
   }
 }
