@@ -4,5 +4,9 @@ $baseFontFamily: system-ui, -apple-system, Helvetica, Arial, sans-serif;
   @return $fontFamily, $baseFontFamily;
 }
 
+@function pingfang() {
+  @return ff('PingFangSC-Regular')
+}
+
 //$PingFang:ff("PingFang SC");
 //$DINNextLTPro:ff("DIN Next LT Pro");
