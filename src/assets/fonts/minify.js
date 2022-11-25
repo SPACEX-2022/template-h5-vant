@@ -4,13 +4,17 @@ function minifyFont(fontName, text) {
   text = [...new Set(text.split(''))]
   const fontmin = new Fontmin()
     .src(`./${fontName}.ttf`)
-    .use(Fontmin.glyph({
+
+  if (text) {
+    fontmin.use(Fontmin.glyph({
       text,
       hinting: false         // keep ttf hint info (fpgm, prep, cvt). default = true
     }))
-    .use(Fontmin.ttf2woff({
-      deflate: true           // deflate woff. default = false
-    }))
+  }
+
+  fontmin.use(Fontmin.ttf2woff({
+    deflate: true           // deflate woff. default = false
+  }))
     .use(Fontmin.ttf2woff2())
     // .use(Fontmin.css())
     .dest('build/fonts');
