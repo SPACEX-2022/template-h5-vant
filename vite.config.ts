@@ -51,7 +51,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       viteVConsole({
         entry: path.resolve('src/main.ts'), // or you can use entry: [path.resolve('src/main.ts')]
         localEnabled: true,
-        enabled: isBuild,
+        enabled: viteEnv.VITE_USE_VCONSOLE === true,
         config: {
           maxLogNumber: 1000,
           theme: 'dark'
