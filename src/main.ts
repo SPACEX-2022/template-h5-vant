@@ -4,6 +4,7 @@ import 'normalize.css';
 import { createApp } from 'vue'
 import { setupStore } from "@/stores";
 import { setupVant } from "@/vant";
+import './assets/vant.scss';
 
 import App from './App.vue'
 
