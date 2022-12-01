@@ -14,6 +14,7 @@ import {
     List,
     Steps,
     Grid,
+    Image,
 } from 'vant';
 // 2. 引入组件样式
 import 'vant/lib/index.css';
@@ -35,4 +36,5 @@ export function setupVant(app: App<Element>) {
         .use(List)
         .use(Steps)
         .use(Grid)
+        .use(Image)
 }
