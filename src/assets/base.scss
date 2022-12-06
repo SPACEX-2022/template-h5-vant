@@ -29,4 +29,5 @@ html {
 
 body {
   font-family: $baseFontFamily;
+  -webkit-overflow-scrolling: unset;
 }
