@@ -67,6 +67,7 @@
     "vite": "^3.0.4",
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-html": "^3.2.0",
+    "vite-plugin-imagemin": "^0.6.1",
     "vite-plugin-vconsole": "^1.2.2",
     "vite-plugin-vue-setup-extend": "^0.4.0",
     "vitest": "^0.21.0",
