@@ -178,3 +178,11 @@ export function useRafThrottle<T extends FunctionArgs>(fn: T): T {
     });
   };
 }
+
+/**
+ * 设置网页标题
+ * @param title
+ */
+export function setTitle(title: string) {
+  document.title = title
+}
