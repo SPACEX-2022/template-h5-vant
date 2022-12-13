@@ -1,11 +1,11 @@
-import type { LocaleSetting, LocaleType } from '/#/config';
+import type { LocaleSetting, LocaleType } from "/#/config";
 
-import { defineStore } from 'pinia';
-import { store } from '/@/stores';
+import { defineStore } from "pinia";
+import { store } from "/@/stores";
 
-import { LOCALE_KEY } from '/@/enums/cacheEnum';
-import { createLocalStorage } from '/@/utils/cache';
-import { localeSetting } from '/@/settings/localeSetting';
+import { LOCALE_KEY } from "/@/enums/cacheEnum";
+import { createLocalStorage } from "/@/utils/cache";
+import { localeSetting } from "/@/settings/localeSetting";
 
 const ls = createLocalStorage();
 
@@ -16,7 +16,7 @@ interface LocaleState {
 }
 
 export const useLocaleStore = defineStore({
-  id: 'app-locale',
+  id: "app-locale",
   state: (): LocaleState => ({
     localInfo: lsLocaleSetting,
   }),
@@ -25,7 +25,7 @@ export const useLocaleStore = defineStore({
       return !!this.localInfo?.showPicker;
     },
     getLocale(): LocaleType {
-      return this.localInfo?.locale ?? 'zh_CN';
+      return this.localInfo?.locale ?? "zh_CN";
     },
   },
   actions: {

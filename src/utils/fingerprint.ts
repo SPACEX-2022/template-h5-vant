@@ -1,12 +1,14 @@
 import Fingerprint from "@fingerprintjs/fingerprintjs";
 
-let visitorId = ''
+let visitorId = "";
 
-getFingerprint()
+getFingerprint();
 
 export function getFingerprint() {
-    if (visitorId) return Promise.resolve(visitorId)
-    return Fingerprint.load().then(fp => fp.get()).then(result => {
-        return visitorId = result.visitorId
-    })
+  if (visitorId) return Promise.resolve(visitorId);
+  return Fingerprint.load()
+    .then((fp) => fp.get())
+    .then((result) => {
+      return (visitorId = result.visitorId);
+    });
 }

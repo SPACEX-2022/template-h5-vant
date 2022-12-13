@@ -1,6 +1,6 @@
 // Image resource files used to compress the output of the production environment
 // https://github.com/anncwb/vite-plugin-imagemin
-import viteImagemin from 'vite-plugin-imagemin';
+import viteImagemin from "vite-plugin-imagemin";
 
 export function configImageminPlugin() {
   const plugin = viteImagemin({
@@ -30,8 +30,8 @@ export function configImageminPlugin() {
     //   ],
     // },
     webp: {
-      quality: 100
-    }
+      quality: 100,
+    },
   });
   return plugin;
 }

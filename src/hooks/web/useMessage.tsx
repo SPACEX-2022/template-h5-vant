@@ -4,8 +4,8 @@
 // import { InfoCircleFilled, CheckCircleFilled, CloseCircleFilled } from '@ant-design/icons-vue';
 
 // import { NotificationArgsProps, ConfigProps } from 'ant-design-vue/lib/notification';
-import { t } from './useI18n';
-import { isString } from '/@/utils/is';
+import { t } from "./useI18n";
+import { isString } from "/@/utils/is";
 import { Dialog, Toast } from "vant";
 import type { DialogOptions } from "vant/lib/dialog/types";
 
@@ -21,8 +21,12 @@ import type { DialogOptions } from "vant/lib/dialog/types";
 //   destroy(): void;
 // }
 
-export declare type NotificationPlacement = 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight';
-export declare type IconType = 'success' | 'info' | 'error' | 'warning';
+export declare type NotificationPlacement =
+  | "topLeft"
+  | "topRight"
+  | "bottomLeft"
+  | "bottomRight";
+export declare type IconType = "success" | "info" | "error" | "warning";
 // export interface ModalOptionsEx extends Omit<ModalFuncProps, 'iconType'> {
 //   iconType: 'warning' | 'success' | 'error' | 'info';
 // }
@@ -74,7 +78,7 @@ export declare type IconType = 'success' | 'info' | 'error' | 'warning';
 const getBaseOptions = () => {
   // const { t } = useI18n();
   return {
-    okText: t('common.okText'),
+    okText: t("common.okText"),
     centered: true,
   };
 };

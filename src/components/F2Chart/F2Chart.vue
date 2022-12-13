@@ -1,50 +1,50 @@
-<script lang='jsx'>
-import { toRaw } from 'vue';
-import Canvas from '@antv/f2-vue';
-import { Chart, Interval, Axis } from '@antv/f2';
-import Grahpic from './Grahpic';
+<script lang="jsx">
+import { toRaw } from "vue";
+import Canvas from "@antv/f2-vue";
+import { Chart, Interval, Axis } from "@antv/f2";
+import Grahpic from "./Grahpic";
 const data1 = [
-  { genre: 'Sports', sold: 275 },
-  { genre: 'Strategy', sold: 115 },
-  { genre: 'Action', sold: 120 },
-  { genre: 'Shooter', sold: 350 },
-  { genre: 'Other', sold: 150 },
+  { genre: "Sports", sold: 275 },
+  { genre: "Strategy", sold: 115 },
+  { genre: "Action", sold: 120 },
+  { genre: "Shooter", sold: 350 },
+  { genre: "Other", sold: 150 },
 ];
 const data2 = [
-  { genre: 'Sports', sold: 275 },
-  { genre: 'Strategy', sold: 115 },
-  { genre: 'Action', sold: 20 },
-  { genre: 'Shooter', sold: 50 },
-  { genre: 'Other', sold: 50 },
+  { genre: "Sports", sold: 275 },
+  { genre: "Strategy", sold: 115 },
+  { genre: "Action", sold: 20 },
+  { genre: "Shooter", sold: 50 },
+  { genre: "Other", sold: 50 },
 ];
 export default {
-  name: 'App',
+  name: "App",
   data() {
     return {
-      year: '2021',
+      year: "2021",
       chartData: data1,
-    }
+    };
   },
   mounted() {
     setTimeout(() => {
-      this.year = '2022';
+      this.year = "2022";
       this.chartData = data2;
     }, 1000);
   },
   render() {
     const { year, chartData } = this;
-    console.log(year, chartData)
+    console.log(year, chartData);
     return (
-        <div className="container">
-          <Canvas pixelRatio={ window.devicePixelRatio }>
-            <Chart data={ toRaw(chartData) }>
-              <Grahpic year={ year } />
-              <Axis field="genre"/>
-              <Axis field="sold"/>
-              <Interval x="genre" y="sold" color="genre" />
-            </Chart>
-          </Canvas>
-        </div>
+      <div className="container">
+        <Canvas pixelRatio={window.devicePixelRatio}>
+          <Chart data={toRaw(chartData)}>
+            <Grahpic year={year} />
+            <Axis field="genre" />
+            <Axis field="sold" />
+            <Interval x="genre" y="sold" color="genre" />
+          </Chart>
+        </Canvas>
+      </div>
     );
   },
 };

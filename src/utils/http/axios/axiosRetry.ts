@@ -1,4 +1,4 @@
-import type { AxiosError, AxiosInstance } from 'axios';
+import type { AxiosError, AxiosInstance } from "axios";
 
 /**
  *  @description: 请求重试机制

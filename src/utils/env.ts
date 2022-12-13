@@ -1,8 +1,8 @@
-import type { GlobEnvConfig } from '/#/config';
+import type { GlobEnvConfig } from "/#/config";
 
-import { warn } from '/@/utils/log';
-import pkg from '../../package.json';
-import { getConfigFileName } from '../../build/getConfigFileName';
+import { warn } from "/@/utils/log";
+import pkg from "../../package.json";
+import { getConfigFileName } from "../../build/getConfigFileName";
 
 export function getCommonStoragePrefix() {
   const { VITE_GLOB_APP_SHORT_NAME } = getAppEnvConfig();
@@ -32,7 +32,7 @@ export function getAppEnvConfig() {
 
   if (!/^[a-zA-Z\_]*$/.test(VITE_GLOB_APP_SHORT_NAME)) {
     warn(
-      `VITE_GLOB_APP_SHORT_NAME Variables can only be characters/underscores, please modify in the environment variables and re-running.`,
+      `VITE_GLOB_APP_SHORT_NAME Variables can only be characters/underscores, please modify in the environment variables and re-running.`
     );
   }
 
@@ -48,12 +48,12 @@ export function getAppEnvConfig() {
 /**
  * @description: Development mode
  */
-export const devMode = 'development';
+export const devMode = "development";
 
 /**
  * @description: Production mode
  */
-export const prodMode = 'production';
+export const prodMode = "production";
 
 /**
  * @description: Get environment variables

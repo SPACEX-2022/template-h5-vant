@@ -18,4 +18,3 @@ function createMetaGuard(router: Router) {
     }
   });
 }
-

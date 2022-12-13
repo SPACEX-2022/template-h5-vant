@@ -1,12 +1,19 @@
-import { getCurrentInstance, onBeforeUnmount, ref, Ref, shallowRef, unref } from 'vue';
-import { useRafThrottle } from '/@/utils/domUtils';
-import { addResizeListener, removeResizeListener } from '/@/utils/event';
-import { isDef } from '/@/utils/is';
+import {
+  getCurrentInstance,
+  onBeforeUnmount,
+  ref,
+  Ref,
+  shallowRef,
+  unref,
+} from "vue";
+import { useRafThrottle } from "/@/utils/domUtils";
+import { addResizeListener, removeResizeListener } from "/@/utils/event";
+import { isDef } from "/@/utils/is";
 
-const domSymbol = Symbol('watermark-dom');
+const domSymbol = Symbol("watermark-dom");
 
 export function useWatermark(
-  appendEl: Ref<HTMLElement | null> = ref(document.body) as Ref<HTMLElement>,
+  appendEl: Ref<HTMLElement | null> = ref(document.body) as Ref<HTMLElement>
 ) {
   const func = useRafThrottle(function () {
     const el = unref(appendEl);
@@ -27,21 +34,21 @@ export function useWatermark(
   };
 
   function createBase64(str: string) {
-    const can = document.createElement('canvas');
+    const can = document.createElement("canvas");
     const width = 300;
     const height = 240;
     Object.assign(can, { width, height });
 
-    const cans = can.getContext('2d');
+    const cans = can.getContext("2d");
     if (cans) {
       cans.rotate((-20 * Math.PI) / 120);
-      cans.font = '15px Vedana';
-      cans.fillStyle = 'rgba(0, 0, 0, 0.15)';
-      cans.textAlign = 'left';
-      cans.textBaseline = 'middle';
+      cans.font = "15px Vedana";
+      cans.fillStyle = "rgba(0, 0, 0, 0.15)";
+      cans.textAlign = "left";
+      cans.textBaseline = "middle";
       cans.fillText(str, width / 20, height);
     }
-    return can.toDataURL('image/png');
+    return can.toDataURL("image/png");
   }
 
   function updateWatermark(
@@ -49,7 +56,7 @@ export function useWatermark(
       width?: number;
       height?: number;
       str?: string;
-    } = {},
+    } = {}
   ) {
     const el = unref(watermarkEl);
     if (!el) return;
@@ -69,14 +76,14 @@ export function useWatermark(
       updateWatermark({ str });
       return id;
     }
-    const div = document.createElement('div');
+    const div = document.createElement("div");
     watermarkEl.value = div;
     div.id = id;
-    div.style.pointerEvents = 'none';
-    div.style.top = '0px';
-    div.style.left = '0px';
-    div.style.position = 'absolute';
-    div.style.zIndex = '100000';
+    div.style.pointerEvents = "none";
+    div.style.top = "0px";
+    div.style.left = "0px";
+    div.style.position = "absolute";
+    div.style.zIndex = "100000";
     const el = unref(appendEl);
     if (!el) return id;
     const { clientHeight: height, clientWidth: width } = el;

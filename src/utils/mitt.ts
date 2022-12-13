@@ -15,19 +15,22 @@ export type EventHandlerList = Array<Handler>;
 export type WildCardEventHandlerList = Array<WildcardHandler>;
 
 // A map of event types and their corresponding event handlers.
-export type EventHandlerMap = Map<EventType, EventHandlerList | WildCardEventHandlerList>;
+export type EventHandlerMap = Map<
+  EventType,
+  EventHandlerList | WildCardEventHandlerList
+>;
 
 export interface Emitter {
   all: EventHandlerMap;
 
   on<T = any>(type: EventType, handler: Handler<T>): void;
-  on(type: '*', handler: WildcardHandler): void;
+  on(type: "*", handler: WildcardHandler): void;
 
   off<T = any>(type: EventType, handler: Handler<T>): void;
-  off(type: '*', handler: WildcardHandler): void;
+  off(type: "*", handler: WildcardHandler): void;
 
   emit<T = any>(type: EventType, event?: T): void;
-  emit(type: '*', event?: any): void;
+  emit(type: "*", event?: any): void;
   clear(): void;
 }
 
@@ -86,9 +89,11 @@ export default function mitt(all?: EventHandlerMap): Emitter {
       ((all?.get(type) || []) as EventHandlerList).slice().map((handler) => {
         handler(evt);
       });
-      ((all?.get('*') || []) as WildCardEventHandlerList).slice().map((handler) => {
-        handler(type, evt);
-      });
+      ((all?.get("*") || []) as WildCardEventHandlerList)
+        .slice()
+        .map((handler) => {
+          handler(type, evt);
+        });
     },
 
     /**

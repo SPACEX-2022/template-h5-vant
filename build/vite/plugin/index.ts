@@ -1,20 +1,20 @@
-import type { PluginOption } from 'vite';
-import vue from '@vitejs/plugin-vue';
-import vueJsx from '@vitejs/plugin-vue-jsx';
-import legacy from '@vitejs/plugin-legacy';
+import type { PluginOption } from "vite";
+import vue from "@vitejs/plugin-vue";
+import vueJsx from "@vitejs/plugin-vue-jsx";
+import legacy from "@vitejs/plugin-legacy";
 // import purgeIcons from 'vite-plugin-purge-icons';
 // import windiCSS from 'vite-plugin-windicss';
 // import VitePluginCertificate from 'vite-plugin-mkcert';
-import vueSetupExtend from 'vite-plugin-vue-setup-extend';
-import { configHtmlPlugin } from './html';
-import { configPwaConfig } from './pwa';
-import { configMockPlugin } from './mock';
-import { configCompressPlugin } from './compress';
-import { configStyleImportPlugin } from './styleImport';
-import { configVisualizerConfig } from './visualizer';
-import { configThemePlugin } from './theme';
-import { configImageminPlugin } from './imagemin';
-import { configSvgIconsPlugin } from './svgSprite';
+import vueSetupExtend from "vite-plugin-vue-setup-extend";
+import { configHtmlPlugin } from "./html";
+import { configPwaConfig } from "./pwa";
+import { configMockPlugin } from "./mock";
+import { configCompressPlugin } from "./compress";
+import { configStyleImportPlugin } from "./styleImport";
+import { configVisualizerConfig } from "./visualizer";
+import { configThemePlugin } from "./theme";
+import { configImageminPlugin } from "./imagemin";
+import { configSvgIconsPlugin } from "./svgSprite";
 
 export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
   const {
@@ -25,7 +25,7 @@ export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
     VITE_BUILD_COMPRESS_DELETE_ORIGIN_FILE,
   } = viteEnv;
 
-  const vitePlugins: (PluginOption)[] = [
+  const vitePlugins: PluginOption[] = [
     // // have to
     // vue(),
     // // have to
@@ -71,7 +71,10 @@ export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
 
     // rollup-plugin-gzip
     vitePlugins.push(
-      configCompressPlugin(VITE_BUILD_COMPRESS, VITE_BUILD_COMPRESS_DELETE_ORIGIN_FILE),
+      configCompressPlugin(
+        VITE_BUILD_COMPRESS,
+        VITE_BUILD_COMPRESS_DELETE_ORIGIN_FILE
+      )
     );
 
     // vite-plugin-pwa

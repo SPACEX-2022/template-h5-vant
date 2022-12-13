@@ -1,4 +1,4 @@
-export type ErrorMessageMode = 'none' | 'modal' | 'message' | undefined;
+export type ErrorMessageMode = "none" | "modal" | "message" | undefined;
 
 export interface RequestOptions {
   // Splicing request parameters to url
@@ -45,24 +45,24 @@ export interface Result<T = any> {
  * 分页请求返回数据类型
  */
 export interface PageResult<T = any> {
-  code:           string;
-  dataResult:     T;
-  message:        string;
-  pageIndex:      number;
-  pageSize:       number;
+  code: string;
+  dataResult: T;
+  message: string;
+  pageIndex: number;
+  pageSize: number;
   permitNextPage?: number;
-  success?:        boolean;
-  total:          number;
-  totalPage?:      number;
+  success?: boolean;
+  total: number;
+  totalPage?: number;
 }
 
 /**
  * 分页请求数据参数
  */
 export interface PageQueryParam {
-  offset?:    number;
+  offset?: number;
   pageIndex: number;
-  pageSize:  number;
+  pageSize: number;
 }
 
 // multipart/form-data: upload file

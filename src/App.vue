@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView } from "vue-router";
 </script>
 
 <template>
@@ -45,5 +45,4 @@ nav a {
 nav a:first-of-type {
   border: 0;
 }
-
 </style>
