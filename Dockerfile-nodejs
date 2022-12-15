@@ -1,0 +1,21 @@
+# build stage
+FROM node:10 AS build_image
+
+WORKDIR /app
+
+COPY . /app
+
+EXPOSE 8080
+
+RUN npm install && npm run build
+
+# production stage
+FROM node:10
+
+WORKDIR /app
+
+COPY --from=build_image /app/dist ./dist
+
+RUN npm i -g http-server
+
+CMD http-server ./dist
