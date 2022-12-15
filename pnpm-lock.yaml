@@ -17,7 +17,7 @@ specifiers:
   '@vant/compat': ^1
   '@vant/touch-emulator': ^1.4.0
   '@vant/use': ^1.4.3
-  '@vitejs/plugin-legacy': ^2.2.0
+  '@vitejs/plugin-legacy': ^3
   '@vitejs/plugin-vue': ^3.0.1
   '@vitejs/plugin-vue-jsx': ^2.0.0
   '@vue/eslint-config-prettier': ^7.0.0
@@ -96,7 +96,7 @@ devDependencies:
   '@types/lodash-es': 4.17.6
   '@types/node': 16.11.56
   '@types/qs': 6.9.7
-  '@vitejs/plugin-legacy': 2.2.0_vite@4.0.1
+  '@vitejs/plugin-legacy': 3.0.1_vite@4.0.1
   '@vitejs/plugin-vue': 3.0.3_vite@4.0.1+vue@3.2.37
   '@vitejs/plugin-vue-jsx': 2.0.0_vite@4.0.1+vue@3.2.37
   '@vue/eslint-config-prettier': 7.0.0_bxpuzolsxufkw2ipnoyzzxnyrm
@@ -483,8 +483,8 @@ packages:
       regenerator-runtime: 0.13.9
     dev: false
 
-  /@babel/standalone/7.19.5:
-    resolution: {integrity: sha512-H2eXpo1ZfTZhBwsCbfSKHrjTb934laSas14hdjULLSKmLxU4B7kazQKm3mjpDuH/HyPmRq1cbrGL7223M7EDFw==}
+  /@babel/standalone/7.20.6:
+    resolution: {integrity: sha512-u5at/CbBLETf7kx2LOY4XdhseD79Y099WZKAOMXeT8qvd9OSR515my2UNBBLY4qIht/Qi9KySeQHQwQwxJN4Sw==}
     engines: {node: '>=6.9.0'}
     dev: true
 
@@ -1240,17 +1240,17 @@ packages:
     resolution: {integrity: sha512-rSnETN7P9qT1WbItMpQxBqe3cHeK2ZFYp1sCxWUXaTeI71TqA8sOdzC36ledZ36NQgFNTch9fsRPYOkrCgZfQA==}
     dev: false
 
-  /@vitejs/plugin-legacy/2.2.0_vite@4.0.1:
-    resolution: {integrity: sha512-xkSXZl2LNk0KKyo5CJknNW84mSlmHIClFzsBuFXkX3yBt+Lr8UO/n4QOg2X7+jvurgBRies9FRn3ZvMem+TmIg==}
+  /@vitejs/plugin-legacy/3.0.1_vite@4.0.1:
+    resolution: {integrity: sha512-XCtEjxoR3rmy000ujYRBp5kggWqzHz9+F20/yIMUWOzbvu0+KW1e14Fvb8h7SpNn+bfjGW1RiAs1Vrgb7Js+iQ==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       terser: ^5.4.0
-      vite: ^3.0.0
+      vite: ^4.0.0
     dependencies:
-      '@babel/standalone': 7.19.5
-      core-js: 3.25.5
-      magic-string: 0.26.7
-      regenerator-runtime: 0.13.9
+      '@babel/standalone': 7.20.6
+      core-js: 3.26.1
+      magic-string: 0.27.0
+      regenerator-runtime: 0.13.11
       systemjs: 6.13.0
       vite: 4.0.1_bwj5erdihskkdrf4xa4msnetxe
     dev: true
@@ -2216,6 +2216,12 @@ packages:
   /core-js/3.25.5:
     resolution: {integrity: sha512-nbm6eZSjm+ZuBQxCUPQKQCoUEfFOXjUZ8dTTyikyKaWrTYmAVbykQfwsKE5dBK88u3QCkCrzsx/PPlKfhsvgpw==}
     requiresBuild: true
+    dev: false
+
+  /core-js/3.26.1:
+    resolution: {integrity: sha512-21491RRQVzUn0GGM9Z1Jrpr6PNPxPi+Za8OM9q4tksTSnlbXXGKK1nXNg/QvwFYettXvSX6zWKCtHHfjN4puyA==}
+    requiresBuild: true
+    dev: true
 
   /core-util-is/1.0.3:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
@@ -4915,11 +4921,11 @@ packages:
       sourcemap-codec: 1.4.8
     dev: true
 
-  /magic-string/0.26.7:
-    resolution: {integrity: sha512-hX9XH3ziStPoPhJxLq1syWuZMxbDvGNbVchfrdCtanC7D13888bMFow61x8axrx+GfHLtVeAx2kxL7tTGRl+Ow==}
+  /magic-string/0.27.0:
+    resolution: {integrity: sha512-8UnnX2PeRAPZuN12svgR9j7M1uWMovg/CEnIwIG0LFkXSJJe4PdfUGiTGl8V9bsBHFUtfVINcSyYxd7q+kx9fA==}
     engines: {node: '>=12'}
     dependencies:
-      sourcemap-codec: 1.4.8
+      '@jridgewell/sourcemap-codec': 1.4.14
     dev: true
 
   /make-dir/1.3.0:
@@ -5987,8 +5993,13 @@ packages:
       strip-indent: 4.0.0
     dev: true
 
+  /regenerator-runtime/0.13.11:
+    resolution: {integrity: sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==}
+    dev: true
+
   /regenerator-runtime/0.13.9:
     resolution: {integrity: sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==}
+    dev: false
 
   /regexp.prototype.flags/1.4.3:
     resolution: {integrity: sha512-fjggEOO3slI6Wvgjwflkc4NFRCTZAu5CnNfBd5qOMYhWdn67nJBBu34/TkD++eeFmd8C9r9jfXJ27+nSiRkSUA==}
