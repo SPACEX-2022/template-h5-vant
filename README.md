@@ -8,6 +8,9 @@
 - vw + rem 移动端适配
 - lottie-web-vue
 
+待实现的功能：
+- png图片转webp图片功能，并且支持自动降级切换（根据浏览器）（最好支持前端工程化和nginx拦截方案）
+
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
