@@ -21,6 +21,7 @@
     "axios": "^0.27.2",
     "crypto-js": "^4.1.1",
     "dayjs": "^1.11.6",
+    "libpag": "^4.1.35",
     "lodash-es": "^4.17.21",
     "lottie-web-vue": "^2.0.6",
     "mathjs": "^11.1.0",
